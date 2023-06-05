@@ -55,6 +55,7 @@ export async function getAccessToken(): Promise<string> {
   body.append('client_secret', clientSecret)
   body.append('refresh_token', refreshToken)
   body.append('grant_type', 'refresh_token')
+  console.log(body)
 
   const resp = await axios.post(apiConfig.authApi, body, {
     headers: {
